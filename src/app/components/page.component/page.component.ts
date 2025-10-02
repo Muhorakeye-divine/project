@@ -20,14 +20,7 @@ interface Social {
 export class PageComponent {
 
     currentYear = new Date().getFullYear();
-    showWelcome = true;
-  delay = 3000; // en millisecondes (3s)
-
-  constructor() {
-    setTimeout(() => {
-      this.showWelcome = false;
-    }, this.delay);
-  }
+    
   socials: Social[] = [
     { 
       name: 'Facebook(Meta) ', 
@@ -42,7 +35,7 @@ export class PageComponent {
       link: 'https://www.instagram.com'
     },
     { 
-      name: 'Tik TOk', 
+      name: 'Tik Tok', 
       description: 'Payant selon le nombre des abonnements  et de vues atteint sur sa page.', 
       icon: 'fab fa-tiktok', 
       link: 'https://www.tik tok.com'
