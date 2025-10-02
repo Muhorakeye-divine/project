@@ -1,0 +1,58 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div class="container bg-info-subtle">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm mt-4">
+      <div class="container bg-dark-subtle">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+          aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse gap-4" id="navMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-row gap-4">
+            <li class="nav-item mb-2">
+                <button class="btn px-5 fw-bold bg-info-subtle"routerLink="/about" routerLinkActive="active"> About</button>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container py-3">
+  <h1 class="h4 mb-4 text-center fw-bold fs-1">Réseaux sociaux les plus populaires en 2025</h1>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 ">
+         @for( s of socials ;track s.name){
+        <div class="col bg-body-secondary" >
+          
+       
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <i [class]="s.icon + ' fa-2x text-primary'"></i>
+              </div>
+              <h5 class="card-title fw-medium fs-3 fst-italic bg-info-subtle">{{ s.name }}</h5>
+              <p class="card-text fw-bold fs-6 fst-normal bg-body-secondary">{{ s.description }}</p>
+              <a [href]="s.link" target="_blank" class="btn  bg-info-subtle">
+                Enter
+              </a>
+            </div>
+          </div>
+        
+        </div>
+         }
+      </div>
+    </div>
+
+   
+
+    <footer class="bg-info-subtle py-3 mt-auto">
+      <div class="container text-center small text-muted">
+        © {{ currentYear }} — MonApp
+      </div>
+    </footer>
+    </div>
+    </body>
+ </html>
