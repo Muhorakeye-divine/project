@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { delay,Observable } from 'rxjs';
 
 export interface pay {
   name : string;
@@ -25,7 +25,7 @@ export class Servicepays {
   private http = inject (HttpClient);
   
    getCountry(name:string): Observable<pay[]> {
-    return this.http.get<pay[]>(`${this.apiurl}?name=${name}`);
+    return this.http.get<pay[]>(`${this.apiurl}?name=${name}`).pipe(delay(1000));
   }
 
 
