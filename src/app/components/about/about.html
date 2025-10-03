@@ -1,24 +1,17 @@
-
-<html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <base href="/">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <div class="container py-3">
+<body>
+    <div class="container py-3">
             <header>
                 <nav class="navbar d-flex g-2 p-1">
                     <div class="container d-flex justify-content-center align-items-center w-100 gap-3">
-                    <button  button class="btn px-4 fw-bold bg-info-subtle justify-content-center" routerLink="/Home" routerLinkActive="active">Home</button>
+                        <button  button class="btn px-4 fw-bold bg-info-subtle justify-content-center" routerLink="/Home" routerLinkActive="active">Home</button>
+                        <button  button class="btn px-4 fw-bold bg-warning justify-content-center" routerLink="/about" routerLinkActive="active">About</button>
                     
-                </div>
-            </nav>
-        </header>
+                    </div>
+                </nav>
+            </header>
         <div class=" container mt-4">
             @if (pays) {
-                <div class="card country-card shadow-lg border-0 overflow-hidden rounded-3">
+                <div class="card country-card shadow-lg overflow-hidden rounded-3">
                     <div class="card-header bg-dark-subtle  text-center fw-bold fs-4">
                         <i class="fas fa-flag me-2"></i>{{pays.name}}
                     </div>
@@ -27,23 +20,23 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item d-flex align-items-center fs-5">
                                     <i class="fas fa-barcode me-2 text-primary fs-2"></i>
-                                    <strong>ISO:</strong><span class="text-muted fw-semibold">{{pays.iso2}}</span>
+                                    <strong  class="str me-3">ISO:</strong><span class="text-muted fw-semibold">{{pays.iso2}}</span>
                                 </li>
                                 <li class="list-group-item fs-5">
                                     <i class="fas fa-landmark me-2 text-bg-success fs-3"></i>
-                                    <strong>Capitale:</strong><span class="text-muted fw-semibold">{{pays.capital}}</span>
+                                    <strong class="str me-3">Capitale:</strong><span class="text-muted fw-semibold">{{pays.capital}}</span>
                                 </li>
                                 <li class="list-group-item fs-5">
                                     <i class="fas fa-users me-2 text-warning fs-2"></i>
-                                    <strong>Population:</strong><span class="text-muted fw-semibold">{{pays.population}}</span>
+                                    <strong class="str me-3">Population:</strong><span class="text-muted fw-semibold">{{pays.population}}</span>
                                 </li>
                                 <li class="list-group-item fs-5">
                                     <i class="fas fa-briefcase me-2 text-bg-info fs-2"></i>
-                                    <strong> Employement:</strong><span class="text-muted fw-semibold">{{pays.employment_services}}</span>
+                                    <strong class="str me-3"> Employement:</strong><span class="text-muted fw-semibold">{{pays.employment_services}}</span>
                                 </li>
                                 <li class="list-group-item fs-5">
                                     <i class="fas fa-tree me-2 text-bg-success fs-2"></i>
-                                    <strong>Forest Area:</strong><span class="text-muted fw-semibold">{{pays.forested_area}}</span>
+                                    <strong class="str me-3">Forest Area:</strong><span class="text-muted fw-semibold">{{pays.forested_area}}</span>
                                 </li>
                             </ul>
                         </div>
@@ -51,44 +44,40 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item fs-5">
                                     <i class="fas fa-plane me-2 text-danger fs-2"></i>
-                                    <strong>Tourists:</strong><span class="text-muted fw-semibold">{{pays.tourists}}</span>
+                                    <strong class="str me-3">Tourists:</strong><span class="text-muted fw-semibold">{{pays.tourists}}</span>
                                 </li>
                                 <li class="list-group-item fs-5" >
                                     <i class="fas fa-truck me-2 text-secondary fs-2"></i>
-                                    <strong>Exports:</strong><span class="text-muted fw-semibold">{{pays.exports}}</span>
+                                    <strong class="str me-3">Exports:</strong><span class="text-muted fw-semibold">{{pays.exports}}</span>
                                 </li>
                                 <li class="list-group-item fs-5">
                                     <i class="fas fa-baby me-2 text-warning fs-2"></i>
-                                    <strong>Fertility:</strong><span class="text-muted fw-semibold">{{pays.fertility}}</span>
+                                    <strong class="str me-3">Fertility:</strong><span class="text-muted fw-semibold">{{pays.fertility}}</span>
                                 </li>
                                 <li class="list-group-item fs-5">
                                     <i class="fas fa-hands-helping me-2 text-danger fs-2"></i>
-                                    <strong>Refugees:</strong><span class="text-muted fw-semibold">{{pays.refugees}}</span>
+                                    <strong class="str me-3">Refugees:</strong><span class="text-muted fw-semibold">{{pays.refugees}}</span>
 
                                 </li>
                                 <li class="list-group-item fs-5">
                                     <i class="fas fa-phone-alt me-2 text-secondary fs-3"></i>
-                                    <strong>Codes_Phones:</strong><span class="text-body fw-semibold">{{pays.telephone_country_codes}}</span>
+                                    <strong class="str me-3">Codes_Phones:</strong><span class="text-body fw-semibold">{{pays.telephone_country_codes}}</span>
                                 </li>
-                                
-                                
-                                
                             </ul>
                         </div>
                     </div>
 
                 </div>
             }
-        </div>
-       
-
-
-
-
- 
+                @else { 
         
+                            <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                                <div class="spinner-border text-warning">
+                                 
+                                </div>
+                            </div>
+                        }
+        </div>  
+       
     </div>
-
-    
 </body>
-</html>
